@@ -1,2 +1,3 @@
-# inicorn
-Some lower-level networking programming to learn some concepts.
+# Rawnicorn
+
+Some low-level networking programming to create very raw and non-production suitable network servers inspired by Gunicorn.

@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+# Local running tools
+python-dotenv = {extras = ["cli"], version = "*"}
+# Coding tools
+mypy = "*"
+flake8 = "*"
+black = "20.8b1"
+isort = "*"
+# Testing tools
+tox = "*"
+pytest = "*"
+pytest-dotenv = "*"
+pytest-cov = "*"
+asynctest = "*"
+
+[packages]
+# Util functions
+requests = "*"
+
+[scripts]
+"start:local" = "./main.py"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true  # for black (! care for updates)
