@@ -11,4 +11,4 @@ if __name__ == "__main__":
 
     # booting
     server = MasterRawnicorn(cfg)
-    server.boot()
+    server.run()
