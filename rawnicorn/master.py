@@ -9,13 +9,13 @@ import socket
 import sys
 import time
 from logging.config import dictConfig
+from typing import Any
 from typing import Dict
 from typing import Optional
 
 from rawnicorn.config import RawnicornConfig
 from rawnicorn.logger import build_logging_config
 from rawnicorn.workers import BasicWorker
-from rawnicorn.workers import WorkerPool
 
 
 class MasterRawnicorn:
@@ -25,7 +25,7 @@ class MasterRawnicorn:
 
     # pids
     pid: int
-    workerpool: WorkerPool
+    workerpool: Dict[int, Any]
 
     # sockets
     listener_socket: Optional[socket.socket]  # main server socket
@@ -45,7 +45,7 @@ class MasterRawnicorn:
         self.config = config
         self.listener_socket = None
         self.running = False
-        self.workerpool = {}
+        self.workerpool = dict()
 
     def _initialize_loggers(self, log_level: str) -> None:
         """

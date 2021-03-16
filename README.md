@@ -1,3 +1,3 @@
-# Rawnicorn
+# 🐍 Rawnicorn 🐍
 
-Some low-level networking programming to create very raw and non-production suitable network servers inspired by Gunicorn.
+Some "low-level" networking programming in order to create an app server inspired by Gunicorn.
